@@ -30,7 +30,7 @@ public class JacobZuma extends Person {
 		super(name, age, gender, type);
 		// TODO Auto-generated constructor stub
 		this.lawyer = lawyer;
-		
+		this.architect = architect;
 	}
 
 }
