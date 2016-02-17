@@ -3,9 +3,12 @@ package com.company.NkandlaExercise;
 import junit.framework.TestCase;
 public class TestPerson extends TestCase {
 	
-JacobZuma Jz;
-Person Hz;
-Person Jm;
+	private IPoliticianFactory DAFactory  = new DAPoliticianFactory();
+	private IPoliticianFactory EFFFactory = new EFFPoliticianFactory();
+	
+	private JacobZuma Jz;
+	private Person Hz;
+	private Person Jm;
 
 
 public void testJz () {
@@ -24,8 +27,8 @@ protected void setUp() throws Exception {
 	// TODO Auto-generated method stub
 	super.setUp();
 	Jz = new JacobZuma("Jacob Zuma", 55, "M", PersonType.Politician, new Architect("John", 21, "M", PersonType.Architect), new Lawyer("James", 25, "F", PersonType.Lawyer));
-	Hz = new HelenZille("Helen Zille", 55, "F", PersonType.Politician);
-	Jm = new JuliusMalema("Julius Malema", 55, "M", PersonType.Politician);
+	Hz = (Person)DAFactory.createPolitician();
+	Jm = (Person)EFFFactory.createPolitician();
 }
 
 public void testHz () {

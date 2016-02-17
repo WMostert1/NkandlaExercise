@@ -1,7 +1,5 @@
 package com.company.NkandlaExercise;
 
-import org.junit.Test;
-
 import junit.framework.TestCase;
 
 
@@ -14,7 +12,7 @@ public class HomesteadTest extends TestCase {
 		// TODO Auto-generated method stub
 		super.setUp();
 
-		hs = new Nkandla("Nkandla Homestead", "Nkandla", "KZN", "RSA");
+		hs = Nkandla.getInstance();
 	}
 
 	public void testNkandlaSetUp() {
